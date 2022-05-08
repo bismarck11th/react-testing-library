@@ -1,4 +1,4 @@
-import reducer, { increment, incrementByAmount } from './features/customCounter/customCounterSlice';
+import reducer, { increment, incrementByAmount } from '../features/customCounter/customCounterSlice';
 
 describe('Reducer of Redux Toolkit', () => {
   describe('increment action', () => {

@@ -1,4 +1,4 @@
-import reducer, { fetchDummy } from './features/customCounter/customCounterSlice';
+import reducer, { fetchDummy } from '../features/customCounter/customCounterSlice';
 
 describe('extraReducer', () => {
   const initialState = {

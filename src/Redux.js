@@ -9,7 +9,6 @@ import {
 
 const Redux = () => {
   const [number, setNumber] = useState(0);
-  console.log(number);
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
 

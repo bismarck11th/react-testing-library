@@ -6,8 +6,8 @@ import userEvent from '@testing-library/user-event';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 
-import CustomCounterReducer from '../src/features/customCounter/customCounterSlice.js';
-import ReduxAsync from './ReduxAsync';
+import CustomCounterReducer from '../features/customCounter/customCounterSlice.js';
+import ReduxAsync from '../ReduxAsync';
 
 const server = setupServer(
   rest.get('https://jsonplaceholder.typicode.com/users/1', (req, res, ctx) => {
