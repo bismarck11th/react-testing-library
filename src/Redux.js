@@ -16,7 +16,7 @@ const Redux = () => {
   return (
     <div>
       <h3>Redux Integration Test</h3>
-      <duv>
+      <div>
         <button onClick={() => dispatch(increment())}>+</button>
         <span data-testid="count-value">{count}</span>
         <button onClick={() => dispatch(decrement())}>-</button>
@@ -27,7 +27,7 @@ const Redux = () => {
           value={number}
           onChange={(e) => setNumber(e.target.value)}
         ></input>
-      </duv>
+      </div>
     </div>
   );
 };
