@@ -5,7 +5,7 @@ import {
   fetchDummy,
   selectUsername,
   fetchJSON
-} from './features/customCounter/customCounterSlice';
+} from '../features/customCounter/customCounterSlice';
 
 const ReduxAsync = () => {
   const count = useSelector(selectCount);

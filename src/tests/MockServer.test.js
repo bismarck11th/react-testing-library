@@ -3,7 +3,7 @@ import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
-import MockServer from '../MockServer';
+import MockServer from '../components/MockServer';
 
 const server = setupServer(
   rest.get('https://jsonplaceholder.typicode.com/users/1', (req, res, ctx) => {

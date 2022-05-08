@@ -2,12 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
-import RenderInput from './RenderInput';
-import FrameworkList from './FrameworkList';
-import UseEffectRender from './UseEffectRender';
-import MockServer from './MockServer';
-import Redux from './Redux';
-import ReduxAsync from './ReduxAsync';
+import RenderInput from './components/RenderInput';
+import FrameworkList from './components/FrameworkList';
+import UseEffectRender from './components/UseEffectRender';
+import MockServer from './components/MockServer';
+import Redux from './components/Redux';
+import ReduxAsync from './components/ReduxAsync';
 
 function App() {
   const output = (text) => {

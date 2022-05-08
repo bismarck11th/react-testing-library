@@ -5,7 +5,7 @@ import {
   increment,
   incrementByAmount,
   selectCount
-} from './features/customCounter/customCounterSlice';
+} from '../features/customCounter/customCounterSlice';
 
 const Redux = () => {
   const [number, setNumber] = useState(0);

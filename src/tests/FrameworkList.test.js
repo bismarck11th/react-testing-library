@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import FrameworkList from '../FrameworkList';
+import FrameworkList from '../components/FrameworkList';
 
 describe('REndering the list with props', () => {
   it('Should render No data! when no data propped', () => {

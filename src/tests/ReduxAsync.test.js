@@ -5,7 +5,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import customCounterReducer from '../features/customCounter/customCounterSlice';
-import ReduxAsync from '../ReduxAsync';
+import ReduxAsync from '../components/ReduxAsync';
 
 describe('ReduxAsync test', () => {
   let store;

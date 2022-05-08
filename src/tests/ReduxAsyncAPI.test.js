@@ -7,7 +7,7 @@ import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 
 import CustomCounterReducer from '../features/customCounter/customCounterSlice.js';
-import ReduxAsync from '../ReduxAsync';
+import ReduxAsync from '../components/ReduxAsync';
 
 const server = setupServer(
   rest.get('https://jsonplaceholder.typicode.com/users/1', (req, res, ctx) => {

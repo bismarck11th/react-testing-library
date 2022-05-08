@@ -4,7 +4,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event/';
 
-import Redux from '../Redux';
+import Redux from '../components/Redux';
 import customCounterReducer from '../features/customCounter/customCounterSlice.js';
 
 describe('Redux Integration Test', () => {
