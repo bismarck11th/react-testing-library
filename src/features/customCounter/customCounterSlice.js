@@ -43,7 +43,7 @@ export const customCounterSlice = createSlice({
     decrement: (state) => {
       state.value -= 1;
     },
-    incrementBuAmount: (state, action) => {
+    incrementByAmount: (state, action) => {
       switch (state.mode) {
         case 0:
           state.value += action.payload;
@@ -72,7 +72,7 @@ export const customCounterSlice = createSlice({
   }
 });
 
-export const { increment, decrement, incrementBuAmount } = customCounterSlice.actions;
+export const { increment, decrement, incrementByAmount } = customCounterSlice.actions;
 
 export const selectCount = (state) => state.customCounter.value;
 export const selectUsername = (state) => state.customCounter.username;

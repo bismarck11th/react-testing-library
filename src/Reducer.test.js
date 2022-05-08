@@ -1,4 +1,4 @@
-import reducer, { increment, incrementBuAmount } from './features/customCounter/customCounterSlice';
+import reducer, { increment, incrementByAmount } from './features/customCounter/customCounterSlice';
 
 describe('Reducer of Redux Toolkit', () => {
   describe('increment action', () => {
@@ -41,7 +41,7 @@ describe('Reducer of Redux Toolkit', () => {
     };
 
     it('Should increment by payload value with mode 0', () => {
-      const action = { type: incrementBuAmount.type, payload: 3 };
+      const action = { type: incrementByAmount.type, payload: 3 };
       const state = reducer(initialState, action);
       expect(state.value).toEqual(4);
     });
@@ -51,7 +51,7 @@ describe('Reducer of Redux Toolkit', () => {
         mode: 1,
         value: 1
       };
-      const action = { type: incrementBuAmount.type, payload: 3 };
+      const action = { type: incrementByAmount.type, payload: 3 };
       const state = reducer(initialState, action);
       expect(state.value).toEqual(301);
     });
@@ -61,7 +61,7 @@ describe('Reducer of Redux Toolkit', () => {
         mode: 2,
         value: 1
       };
-      const action = { type: incrementBuAmount.type, payload: 3 };
+      const action = { type: incrementByAmount.type, payload: 3 };
       const state = reducer(initialState, action);
       expect(state.value).toEqual(30001);
     });
