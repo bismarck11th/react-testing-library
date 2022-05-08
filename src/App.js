@@ -8,6 +8,7 @@ import UseEffectRender from './components/UseEffectRender';
 import MockServer from './components/MockServer';
 import Redux from './components/Redux';
 import ReduxAsync from './components/ReduxAsync';
+import CustomHooks from './components/CustomHooks';
 
 function App() {
   const output = (text) => {
@@ -41,6 +42,7 @@ function App() {
         <MockServer />
         <Redux />
         <ReduxAsync />
+        <CustomHooks />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
