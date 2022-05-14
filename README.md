@@ -1,46 +1,30 @@
-# Getting Started with Create React App and Redux
+# 参考
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+[(自分の) JavaScript のユニットテストの書き方](https://zenn.dev/mizchi/articles/my-test-policy)
+>・テストは動作保証でありつつ、ついでにアプリケーション内で「もっとも信用できるコピペ元」にならなければならない
+>・`__tests__` や test/** ではなく、実装したいディレクトリで実装してしまってよい。テストが見えないディレクトリに隠蔽されていることで、見た目上きれいになっても、維持する対象という意識が薄れて、テスト意識が低い人に放置される害のが大きいと感じている。テストは消極的な存在ではなく、積極的に混ぜていったほうが逆にいいと考えている。
+>・describe や context を積極的には使わない。ファイル名自体がテストのためのスコープを持つので、基本的にはそれで十分とする。 describe があるときは、専用の beforeEach 等があることを期待する。
 
-## Available Scripts
+[Reactのユニットテスト2021](https://zenn.dev/erukiti/articles/unit-testing-react-2021)
 
-In the project directory, you can run:
+[フロントエンドのテスト戦略について考える](https://zenn.dev/koki_tech/articles/a96e58695540a7)
+>・トレードオフの観点でバランスのよい結合テストを厚めに書く
+>・E2E テストは、課金導線やタイムラインなどの、不具合が発生するとビジネス上のネガティブインパクトの大きい箇所だけ書く
+>・単体テストは、明らかにテストしなくても自明なロジックに対しては書かない。複雑性が高いビジネスロジックの関数に関しては書く
+>・静的テストはベースラインとして必ず引く。導入が後回しになればなるほど導入コストが跳ね上がるので、プロジェクトの最初に必ず入れる
 
-### `npm start`
+[フロントエンド（React Testing Library）で TDD（テスト駆動開発）をする](https://zenn.dev/higa/articles/34439dc279c55dd2ab95)
+>・E2E（End to End）	システム全体が正しく動作するかのテスト	Cypress
+>・Integration	コンポーネントごとの UI のテスト	React Testing Library
+>・Unit	使い回す関数などのテスト	Jest
+>・Static	型や Lint などの静的なテスト	TypeScript, ESLint
+>・テストの実行は、準備（arrange）、実行（act）、検証（assert） の順番に行われます。ただし、テストを書く順番としては逆から書いていくと分かりやすいです。
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[フロントエンドのテストのモックには msw を使うのが最近の流行りらしい](https://zenn.dev/azukiazusa/articles/using-msw-to-mock-frontend-tests)
+>・フロントエンドのテストを書くときには API コールする処理を全てモックする必要があります。外部の API をコールする処理をテストに含めると API サーバーが落ちているなどの外部の要因によってテストが失敗してしまう可能性がありますし、テストを実行するたびに実際に API をコールしてしまうとサーバーに負荷がかかってしまうなど外部に対しても悪影響を与えてしまいます。
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[【フロントエンド】コンポーネント指向（React, Vue）のテスト方針](https://qiita.com/noah-dev/items/3fd211deb8711fae8204)
+>・テストは、テストカバレッジを上げるために書いているのではありません。ソフトウェアが正しく動くことを保証するために書くのです。本番環境にリリース後、そのソフトウェアが「ちゃんと想定通り動くのかどうか」という観点が最も大切であり、それを担保できるテストであるべきだと Kent は主張しています。
+>・Kentは多くの記事でも、「保証 vs スピードと工数」を考慮して最もトレードオフのバランスがよいIntegrationテストを最も書くべきと言っています。その次にE2Eと、Unitを書き、Staticは工数（コスト）がほぼかからないので問答無用で導入しておけばよいと述べています。
+>・
+>・
